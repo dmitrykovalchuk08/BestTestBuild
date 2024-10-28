@@ -44,12 +44,11 @@
 </head>
 
 <body>
-<div id="gameContainer">
+<div id="applixir_vanishing_div" hidden>
+    <iframe id="applixir_parent"></iframe>
+</div>
 
-    <div id="applixir_vanishing_div" hidden>
-        <iframe id="applixir_parent"></iframe>
-    </div>
-    
+<div id="gameContainer">
     <canvas id="unity-canvas" data-pixel-art=""></canvas>
     <script src="Build/webGL.loader.js"></script>
     <script>
@@ -114,23 +113,21 @@
             document.getElementsByTagName('head')[0].appendChild(meta);
         }
     </script>
-
-    <script type='application/javascript'>
-        function adStatusCallback(status) {
-            if (status)
-                console.log('Applixir status: ' + status);
-        }
-
-        var options = {
-            zoneId: 2050,
-            devId: 8414,
-            gameId: 8945,
-            adStatusCb: adStatusCallback,
-        };
-        invokeApplixirVideoUnit(options);
-    </script>
-
 </div>
-</body>
+<script type='application/javascript'>
+    function adStatusCallback(status) {
+        if (status)
+            console.log('Applixir status: ' + status);
+    }
 
+    var options = {
+        zoneId: 2050,
+        devId: 8414,
+        gameId: 8945,
+        adStatusCb: adStatusCallback,
+    };
+    invokeApplixirVideoUnit(options);
+</script>
+
+</body>
 </html>
