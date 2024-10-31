@@ -44,6 +44,9 @@
 </head>
 
 <body>
+<div id="applixir_vanishing_div" hidden>
+   <iframe id="applixir_parent" allow="fullscreen"></iframe>
+</div>
 <div id="gameContainer">
     <canvas id="unity-canvas" data-pixel-art=""></canvas>
     <script src="Build/webGL_1.loader.js"></script>
@@ -110,5 +113,20 @@
         }
     </script>
 </div>
+<script type='application/javascript'>
+    function adStatusCallback(status) {
+        if (status)
+            console.log('Applixir status: ' + status);
+    }
+    var options = {
+        zoneId: 2050,
+        devId: 8414,
+        gameId: 8945,
+        userId: 1350829940,
+        adStatusCb: adStatusCallback
+    };
+    invokeApplixirVideoUnit(options);
+</script>
+<script type='text/javascript' src="https://cdn.applixir.com/applixir.sdk4.0m.js"></script>
 </body>
 </html>
