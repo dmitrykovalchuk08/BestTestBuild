@@ -38,16 +38,12 @@
             -ms-interpolation-mode: nearest-neighbor;
         }
     </style>
-
-    <script type='text/javascript' src="https://cdn.applixir.com/applixir.sdk3.0m.js"></script>
-
 </head>
 
 <body>
 <div id="applixir_vanishing_div" hidden>
-    <iframe id="applixir_parent"></iframe>
+   <iframe id="applixir_parent" allow="fullscreen"></iframe>
 </div>
-
 <div id="gameContainer">
     <canvas id="unity-canvas" data-pixel-art=""></canvas>
     <script src="Build/webGL.loader.js"></script>
@@ -114,20 +110,20 @@
         }
     </script>
 </div>
+<script type='text/javascript' src="https://cdn.applixir.com/applixir.sdk4.0m.js"></script>
 <script type='application/javascript'>
     function adStatusCallback(status) {
         if (status)
             console.log('Applixir status: ' + status);
     }
-
     var options = {
         zoneId: 2050,
         devId: 8414,
         gameId: 8945,
-        adStatusCb: adStatusCallback,
+        userId: 1350829940,
+        adStatusCb: adStatusCallback
     };
     invokeApplixirVideoUnit(options);
 </script>
-
 </body>
 </html>
