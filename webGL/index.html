@@ -42,8 +42,10 @@
 
 <body>
 <div id="applixir_vanishing_div" hidden>
-   <iframe id="applixir_parent" allow="fullscreen"></iframe>
+    <iframe id="applixir_parent" allow="fullscreen" style="position: relative; z-index: 1;"></iframe>
 </div>
+    
+
 <div id="gameContainer">
     <canvas id="unity-canvas" data-pixel-art=""></canvas>
     <script src="Build/webGL.loader.js"></script>
