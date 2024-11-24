@@ -42,7 +42,7 @@
 
 <body>
 <div id="applixir_vanishing_div" hidden>
-   <iframe id="applixir_parent" allow="fullscreen" style="position: relative; z-index: 1;"></iframe>
+   <iframe id="applixir_parent" allow="fullscreen"></iframe>
 </div>
 <div id="gameContainer">
     <canvas id="unity-canvas" data-pixel-art=""></canvas>
@@ -78,14 +78,14 @@
                 w = window.innerWidth;
                 h = window.innerHeight;
 
-                var r = 600 / 960;
+                var r = 600 / 800;
 
                 if (w * r > window.innerHeight) {
                     w = Math.min(w, Math.ceil(h / r));
                 }
                 h = Math.floor(w * r);
             } else {
-                w = 960;
+                w = 800;
                 h = 600;
             }
 
@@ -110,7 +110,7 @@
         }
     </script>
 </div>
-
 <script type='text/javascript' src="https://cdn.applixir.com/applixir.sdk4.0m.js"></script>
+
 </body>
 </html>
