@@ -44,7 +44,6 @@
 <div id="injection">
    <iframe id="applixir_parent" allow="fullscreen" style="position: relative; z-index: 1;"></iframe>
 </div>
-<div id="injection"></div>
 
 <div id="gameContainer">
     <canvas id="unity-canvas" data-pixel-art=""></canvas>
@@ -114,11 +113,17 @@
 </div>
 <script type='text/javascript' src="https://s3.us-east-1.amazonaws.com/cdn.applixir.com/applixir.app-staging.js"></script>
 <script type="text/javascript">
+      
+
       const options = {
         accountId: 8123,
         gameId: 8638,
-        zoneId: 2050,
-      };
+        zoneId: 2050,    
+        userId: "e96c0eb9-926e-4787-910e-23b1d3e1b65c",     // required by ad industry. Valid UUID for current user, UUID4 recommended but no PII values
+        //adStatusCb: callback,       // local callback reference
+        verbosity: 5            // 0..5 - for debugging only, leave commented out or set to zero for production use
+        };
+
       window.ApplixirApp = new Application(options);
 
       window.onload = () => {
