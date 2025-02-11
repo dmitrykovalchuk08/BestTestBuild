@@ -41,6 +41,9 @@
 </head>
 
 <body>
+<div id="injection">
+   <iframe id="applixir_parent" allow="fullscreen" style="position: relative; z-index: 1;"></iframe>
+</div>
 <div id="injection"></div>
 
 <div id="gameContainer">
@@ -109,8 +112,6 @@
         }
     </script>
 </div>
-<script type='text/javascript' src="https://cdn.applixir.com/applixir.sdk4.0m.js"></script>
-
 <script type='text/javascript' src="https://s3.us-east-1.amazonaws.com/cdn.applixir.com/applixir.app-staging.js"></script>
 <script type="text/javascript">
       const options = {
@@ -125,22 +126,5 @@
         window.ApplixirApp.initialize();
       };
     </script>
-
-<script type='text/javascript' src="https://s3.us-east-1.amazonaws.com/cdn.applixir.com/applixir.app-staging.js"></script>
-<script type="text/javascript">
-      const options = {
-        accountId: 8123,
-        gameId: 8638,
-        zoneId: 2050,
-      };
-      
-      window.ApplixirApp = new Application(options);
-
-      window.onload = () => {
-        console.log('window loaded, creating the app');
-        window.ApplixirApp.initialize();
-      };
-    </script>
-
 </body>
 </html>
