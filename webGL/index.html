@@ -41,8 +41,9 @@
 </head>
 
 <body>
-<div id="injection"></div>
-
+<div id="injection">
+   <iframe id="applixir_parent" allow="fullscreen" style="position: relative; z-index: 1;"></iframe>
+</div>
 <div id="gameContainer">
     <canvas id="unity-canvas" data-pixel-art=""></canvas>
     <script src="Build/webGL.loader.js"></script>
@@ -109,18 +110,13 @@
         }
     </script>
 </div>
-<script type='text/javascript' src="https://s3.us-east-1.amazonaws.com/cdn.applixir.com/applixir.app-staging.js"></script>
+<script type='text/javascript' src="https://cdn.applixir.com/applixir.app-staging.v6.js"></script>
 <script type="text/javascript">
+      const options = { 
+        injectionElementId: "applixir-app",
+        apiKey: "",
+      };
       
-      const options = {
-        accountId: 8123,
-        gameId: 8638,
-        zoneId: 2050,    
-        userId: "e96c0eb9-926e-4787-910e-23b1d3e1b65c",     // required by ad industry. Valid UUID for current user, UUID4 recommended but no PII values
-        //adStatusCb: callback,       // local callback reference
-        verbosity: 5            // 0..5 - for debugging only, leave commented out or set to zero for production use
-        };
-
       window.ApplixirApp = new Application(options);
 
       window.onload = () => {
@@ -128,5 +124,6 @@
         window.ApplixirApp.initialize();
       };
     </script>
+
 </body>
 </html>
