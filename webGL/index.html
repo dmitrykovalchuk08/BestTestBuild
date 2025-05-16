@@ -41,9 +41,7 @@
 </head>
 
 <body>
-<div id="applixir-app">
-   <iframe id="applixir_parent" allow="fullscreen" style="position: relative; z-index: 1; border: 0;"></iframe>
-</div>
+<div id="applixir-app"></div>
 <div id="gameContainer">
     <canvas id="unity-canvas" data-pixel-art=""></canvas>
     <script src="Build/webGL.loader.js"></script>
@@ -110,17 +108,11 @@
         }
     </script>
 </div>
-<script type='text/javascript' src="https://js.applixirads.com/test-env-new-v6.html"></script>
+<script type="text/javascript" src="https://cdn.applixir.com/applixir.app-staging.v6.js"></script>
 <script type="text/javascript">
       const options = { 
         injectionElementId: "applixir-app",
-        apiKey: "8621cf62-188c-4eb8-ae80-25bbf9ca0f0e",
-        adStatusCallbackFn: (status) => {
-            console.log("Applixir Ad status: ", status);
-        },
-        adErrorCallbackFn: (error) => {
-            console.log("Applixir Error: ", error.getError().toString());
-        }
+        apiKey: "8621cf62-188c-4eb8-ae80-25bbf9ca0f0e"
       };
       
       window.ApplixirApp = new Application(options);
