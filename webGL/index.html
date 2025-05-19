@@ -115,8 +115,6 @@
         apiKey: "ebeaed1d-7178-4442-9a3c-ee99386924c3",
         adStatusCallbackFn: (status) => {
             console.log("OUTSIDE Ad status: ", status);
-            var iresult = 1;
-            var callback = window.applixirCallback;
             window.adStatusCallbackX(status);
         },
         adErrorCallbackFn: (error) => {
