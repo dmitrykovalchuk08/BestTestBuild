@@ -114,10 +114,11 @@
         injectionElementId: "applixir-app",
         apiKey: "ebeaed1d-7178-4442-9a3c-ee99386924c3",
         adStatusCallbackFn: (status) => {
-            console.log("OUTSIDE Ad status: ", status);    
+            console.log("OUTSIDE Ad status: ", status);
             var iresult = 1;
-            Module['dynCall_vi'](window.applixirCallback, iresult);
-
+            var callback = window.applixirCallback;
+            window.adStatusCallbackX(status);
+            
         },
         adErrorCallbackFn: (error) => {
             console.log("Error: ", error.getError().toString());
