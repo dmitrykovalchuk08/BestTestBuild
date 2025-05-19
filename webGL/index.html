@@ -117,8 +117,7 @@
             console.log("OUTSIDE Ad status: ", status);
             var iresult = 1;
             var callback = window.applixirCallback;
-          //  Runtime.dynCall('vi', window.applixirCallback, [iresult]);
-          {{{ makeDynCall('vi', 'callback') }}}(iresult);
+            window.adStatusCallbackX(status);
         },
         adErrorCallbackFn: (error) => {
             console.log("Error: ", error.getError().toString());
