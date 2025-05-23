@@ -122,12 +122,18 @@
       };
       
       window.ApplixirApp = new Application(options);
-
+      try {
+        window.ApplixirApp = new Application(options);
+      } catch (error) {
+        console.error("Error creating Application:", error);
+      }
       window.onload = () => {
-        console.log('window loaded, creating the app');
-        window.ApplixirApp.initialize();
+        if (window.ApplixirApp && typeof window.ApplixirApp.initialize === 'function') {
+            window.ApplixirApp.initialize();
+        } else {
+              console.error("ApplixirApp is not initialized properly.");
+        }
       };
-    </script>
-
+</script>
 </body>
 </html>
